@@ -17,10 +17,8 @@ Several EDA techniques were employed to better understand the dataset, including
 The approach to modeling included using linear regression, where the independent variable \(X\) is represented by the integer index of the dates, and the dependent variable \(Y\) is the predicted closing stock price. The linear regression model can be mathematically expressed as:
 
 ```math
-\[ Y = \beta_0 + \beta_1X + \epsilon \]
+[ Y = \beta_0 + \beta_1X + \epsilon \]
 ```
-
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 where:
 - \(Y\) = Predicted Closing Price
