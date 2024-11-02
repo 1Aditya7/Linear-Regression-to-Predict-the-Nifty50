@@ -1,4 +1,4 @@
-# Stock Price Prediction using Linear Regression
+# Linear Regression for Stock Price Prediction
 
 ## 1. Introduction
 This project aims to predict stock prices using historical closing prices from the National Stock Exchange of India (NSE) data retrieved from Yahoo Finance. I will utilize the linear regression to model the relationship between time (as represented by an integer index) and stock prices. This README provides an overview of the methodology, exploratory data analysis (EDA), results, and conclusions drawn from the analysis.
