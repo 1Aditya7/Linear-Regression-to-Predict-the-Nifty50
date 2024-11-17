@@ -78,7 +78,7 @@ These metrics indicate the accuracy of our model in predicting Nifty50 stock pri
 
 ## 7. Accuracy Evaluation Metrics
 The accuracy of the model was assessed using:
-- **R-squared (R²)**: 
+- **R-squared (R²)**: <br>
   ![R-squared formula](https://quicklatex.com/cache3/87/ql_cea21468528306c29c6ad169e6b07d87_l3.png)
   <br>
   <br>
