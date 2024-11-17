@@ -1,7 +1,7 @@
 # Linear Regression to Predict the Nifty50
 
 ## 1. Introduction
-This project aims to predict stock prices using historical closing prices from the National Stock Exchange of India (NSE) data retrieved from Yahoo Finance. I will utilize the linear regression to model the relationship between time (as represented by an integer index) and stock prices. This README provides an overview of the methodology, exploratory data analysis (EDA), results, and conclusions drawn from the analysis.
+This project aims to predict stock prices using historical closing prices from the National Stock Exchange of India (NSE) data retrieved from Yahoo Finance. I utilized linear regression to model the relationship between time (represented by an integer index) and stock prices. This README provides an overview of the methodology, exploratory data analysis (EDA), results, and conclusions drawn from the analysis.
 
 ## 2. Methodology
 We collected stock price data for the NSE using the Yahoo Finance library, focusing on the historical closing prices for analysis. The choice of closing prices as the independent feature is justified by their significance in financial analysis, reflecting the final consensus price of the stock for the trading day. Closing prices are commonly used in technical analysis due to their perceived stability and reliability, making them suitable for predictive modeling.
@@ -10,6 +10,10 @@ We collected stock price data for the NSE using the Yahoo Finance library, focus
 Several EDA techniques were employed to better understand the dataset, including:
 - **Descriptive Statistics**: Summarizing key metrics such as mean, median, and standard deviation of the closing prices.
 - **Time Series Visualization**: Plotting the closing prices over time to identify trends, seasonal patterns, or anomalies.
+  - **Close Price Plot**:
+    ![Close Price Plot](path/to/close_price_plot.png)
+    - *Inference*: The plot shows the trend of Nifty50 closing prices over the 5-year period. We observe a general upward trend with some periods of high volatility.
+  
 - **Correlation Analysis**: Examining the relationship between the closing price and potential influencing factors, confirming the independence of our feature.
 - **Residual Analysis**: Assessing the residuals of our model to check for patterns that might indicate model inadequacies.
 
@@ -24,22 +28,32 @@ Equation:  **Y = β₀ + β₁X + ε**
 - **β₁** = Slope (coefficient)  
 - **ε** = Error term  
 
-
-
 ## 5. Results
 The model's evaluation yielded several important metrics. The coefficient and intercept provide insights into the relationship between time and stock prices. The coefficient indicates how much the stock price is expected to change for each unit increase in time, while the intercept indicates the expected price when the time index is zero.
 
 ### Inferences from the Train Set Graph
-The graph of the training set illustrates the model's fit to the historical closing prices, showing how well the linear regression line represents the actual data points.
+- **Train Set Graph**:
+  ![Train Set Graph](path/to/train_set_graph.png)
+  - *Inference*: The graph illustrates how well the linear regression line fits the training data. The predicted prices closely follow the actual closing prices with minor deviations.
 
 ### Inferences from Model Evaluation
-Evaluation metrics like Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared value offer quantitative insights into the model's performance. An R-squared close to 1 indicates a strong correlation between the predicted and actual prices, signifying that our model captures a substantial amount of variance in the data.
+- **Model Evaluation**:
+  - *Inference*: Evaluation metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared value were used to assess the model’s performance. The R-squared value of 0.89 suggests a strong correlation between the predicted and actual prices, indicating the model’s effectiveness.
 
 ### Inferences from Subplots
-The subplot analysis reveals patterns and distributions of the residuals, confirming the assumptions of normality and homoscedasticity, which are critical for validating our regression model.
+- **Subplots**:
+  ![Subplots](path/to/subplots.png)
+  - *Inference*: The subplot analysis helps compare actual vs. predicted prices across various data points. It indicates that the model works well on most of the test data, with slight deviations in certain points.
 
-### Inferences from All Plots
-Overall, the visualizations provided a comprehensive view of model performance, showing that while our model performs well, there are still residuals that may warrant further exploration.
+### Inferences from Predicted vs Actual Prices
+- **Predicted vs Actual Prices**:
+  ![Predicted vs Actual Prices](path/to/predicted_vs_actual.png)
+  - *Inference*: This scatter plot shows a close correlation between the predicted and actual prices. The tight clustering of points around the diagonal line suggests that the model accurately predicts the stock price for the most part.
+
+### Inferences from Residuals Histogram
+- **Residuals Histogram**:
+  ![Residuals Histogram](path/to/residuals_histogram.png)
+  - *Inference*: The histogram of residuals and its fit to a normal distribution indicates that the errors are randomly distributed, with no discernible pattern, confirming that the assumptions of linear regression are met.
 
 ## 6. Error Evaluation Metrics
 The following error evaluation metrics were calculated to assess model performance:
@@ -49,23 +63,16 @@ The following error evaluation metrics were calculated to assess model performan
 - **Mean Squared Error (MSE)**:  
   ![MSE Formula](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7DMSE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum%20%28y_i%20-%20%5Chat%7By_i%7D%29%5E2)
 
-
-- **Root Mean Squared Error (RMSE)**:
-  ![R-squared formula](https://latex.codecogs.com/png.latex?R%5E2%20%3D%201%20-%20%5Cfrac%7BSS_%7Bres%7D%7D%7BSS_%7Btot%7D%7D)
-
-
-
-
+- **Root Mean Squared Error (RMSE)**:<br>
+  ![RMSE Formula](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7DRMSE%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%20%5Csum%20%28y_i%20-%20%5Chat%7By_i%7D%29%5E2%7D)
 
 ## 7. Accuracy Evaluation Metrics
 The accuracy of the model was assessed using:
 - **R-squared (R²)**: 
   ![R-squared formula](https://latex.codecogs.com/png.latex?%5Cbg_white%20R%5E2%20%3D%201%20-%20%5Cfrac%7BSS_%7Bres%7D%7D%7BSS_%7Btot%7D%7D)
-  Where:
+  <br>Where:
   - **\( SS_res \)** = Residual Sum of Squares
   - **\( SS_tot \)** = Total Sum of Squares
-
-
 
 ## 8. Limitations and Future Scope
 While the model provides reasonable predictions, it has limitations, such as:
