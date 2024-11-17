@@ -16,16 +16,14 @@ Several EDA techniques were employed to better understand the dataset, including
 ## 4. Approach
 The approach to modeling included using linear regression, where the independent variable \(X\) is represented by the integer index of the dates, and the dependent variable \(Y\) is the predicted closing stock price. The linear regression model can be mathematically expressed as:
 
-```math
-[ Y = \beta_0 + \beta_1X + \epsilon \ ]
-```
+Equation:  **Y = β₀ + β₁X + ε**
 
-where:
-- \(Y\) = Predicted Closing Price
-- \(X\) = Integer Date Index
-- \(\beta_0\) = Intercept
-- \(\beta_1\) = Slope (coefficient)
-- \(\epsilon\) = Error term
+- **Y** = Predicted Closing Price  
+- **X** = Integer Date Index  
+- **β₀** = Intercept  
+- **β₁** = Slope (coefficient)  
+- **ε** = Error term  
+
 
 
 ## 5. Results
@@ -45,18 +43,29 @@ Overall, the visualizations provided a comprehensive view of model performance, 
 
 ## 6. Error Evaluation Metrics
 The following error evaluation metrics were calculated to assess model performance:
-- **Mean Absolute Error (MAE)**: 
-  \[ MAE = \frac{1}{n} \sum |y_i - \hat{y}_i| \]
-- **Mean Squared Error (MSE)**: 
-  \[ MSE = \frac{1}{n} \sum (y_i - \hat{y}_i)^2 \]
-- **Root Mean Squared Error (RMSE)**: 
-  \[ RMSE = \sqrt{MSE} \]
+- **Mean Absolute Error (MAE)**:  
+  ![MAE Formula](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7DMAE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum%20%7Cy_i%20-%20%5Chat%7By_i%7D%7C)
+
+- **Mean Squared Error (MSE)**:  
+  ![MSE Formula](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7DMSE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum%20%28y_i%20-%20%5Chat%7By_i%7D%29%5E2)
+
+
+- **Root Mean Squared Error (RMSE)**:
+  ![R-squared formula](https://latex.codecogs.com/png.latex?R%5E2%20%3D%201%20-%20%5Cfrac%7BSS_%7Bres%7D%7D%7BSS_%7Btot%7D%7D)
+
+
+
+
 
 ## 7. Accuracy Evaluation Metrics
 The accuracy of the model was assessed using:
 - **R-squared (R²)**: 
-  \[ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} \]
-  where \(SS_{res}\) is the residual sum of squares and \(SS_{tot}\) is the total sum of squares.
+  ![R-squared formula](https://latex.codecogs.com/png.latex?%5Cbg_white%20R%5E2%20%3D%201%20-%20%5Cfrac%7BSS_%7Bres%7D%7D%7BSS_%7Btot%7D%7D)
+  Where:
+  - **\( SS_res \)** = Residual Sum of Squares
+  - **\( SS_tot \)** = Total Sum of Squares
+
+
 
 ## 8. Limitations and Future Scope
 While the model provides reasonable predictions, it has limitations, such as:
